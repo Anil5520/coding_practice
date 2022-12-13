@@ -24,7 +24,6 @@ function count(str) {
 }
 console.log(count(str));
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-let str = "anilMahto"
 let vowel = "aeiouAEIOU"
 vowel = vowel.split("")
 let vCount = 0
@@ -62,7 +61,6 @@ function reverse(str) {
     return str.join('');
 }
 //++++++++++++++++++++++++++++++++++++++
-let str = "PushpakKumar"
 function reverseStr(str) {
     if (str.length <= 1) return str;
     return reverseStr(str.substring(1)) + str[0];
@@ -91,7 +89,6 @@ console.log(reverse("Hello World"));
 // Input: {"apple", "ape", "april"}
 // Output: "ap"
 
-let str = ["apple", "ape", "april"];
 let output = ""
 function commonPrefix(str) {
     str.sort((a, b) => a.localeCompare(b));
@@ -104,7 +101,7 @@ function commonPrefix(str) {
     }
     return output;
 }
-console.log(commonPrefix(str));
+console.log(commonPrefix(["apple", "ape", "april"]));
 
 
 
@@ -117,13 +114,13 @@ console.log(commonPrefix(str));
 // Input: s = “i love programming very much” 
 // Output: s = “much very programming love i”
 
-let str = "i love programming very much";
+let S = "i love programming very much";
 str = str.split(' ');
 function reverseWord(str) {
     if (str.length <= 1) return str;
     return reverseWord(str.slice(1)) + ' ' + str[0];
 }
-console.log(reverseWord(str));
+console.log(reverseWord(S));
 
 
 
@@ -185,8 +182,7 @@ function stringWithSpace(str) {
         console.log(arr[j].replace(',', ' - '))
     }
 }
-const str = "My Name Is Ashish"
-stringWithSpace(str)
+stringWithSpace("My Name Is Ashish")
 
 
 
@@ -232,7 +228,7 @@ console.log(arr)
 
 
 //Anagram count
-let str = 'aabaabaa', s2 = 'aaba';
+let string = 'aabaabaa', s2 = 'aaba';
 function anagramCount(str, s2) {
     let map = new Map();
     for (let i = 0; i < s2.length; i++) {
@@ -264,4 +260,4 @@ function anagramCount(str, s2) {
     }
     return ans;
 }
-console.log(anagramCount(str, s2));
+console.log(anagramCount(string, s2));
