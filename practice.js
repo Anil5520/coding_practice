@@ -271,3 +271,25 @@ output- 0,1,1,2,3,5,8,13,21
 //     return ans;
 // }
 // console.log(anagramCount(str, s2))
+
+
+
+
+
+
+let a = "computer", b = [1, 3, 5, 6, 7, 4, 2, 8]
+// output = c1r8o3e2m5t4p6u7
+
+function sol(a, b) {
+    let i = 0, j = a.length - 1, p = 0, q = b.length - 1;
+    let output = '';
+    while (i < j && p < q) {
+        output += a[i] + b[p] + a[j] + b[q];
+        i++;
+        j--;
+        p++;
+        q--;
+    }
+    return output;
+}
+console.log(sol(a, b));
